@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "50204"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/hospital",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/hospital"
+    },
+    {
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "50204"
+        }
+      ],
+      "DownstreamPathTemplate": "/api/hospital/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "UpstreamPathTemplate": "/hospital/{everything}"
+    }
+  ]
+}
